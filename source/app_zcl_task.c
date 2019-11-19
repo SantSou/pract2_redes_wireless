@@ -588,9 +588,7 @@ PRIVATE void APP_vHandleClusterCustomCommands(tsZCL_CallBackEvent *psEvent)
                 DBG_vPrintf(TRACE_ZCL, "Basic Factory Reset Received\r\n");
                 FLib_MemSet(&sBaseDevice,0,sizeof(tsZHA_BaseDevice));
                 APP_vZCL_DeviceSpecific_Init();
-                eZHA_RegisterBaseDeviceEndPoint(ROUTER_APPLICATION_ENDPOINT,
-                                                &APP_ZCL_cbEndpointCallback,
-                                                &sBaseDevice);
+                //eZHA_RegisterBaseDeviceEndPoint(ROUTER_APPLICATION_ENDPOINT,&APP_ZCL_cbEndpointCallback,&sBaseDevice);
                 eZHA_RegisterBaseDeviceEndPoint(ROUTER_TEMP_MEAS_ENDPOINT,
 												&APP_ZCL_cbEndpointCallback,
 												&sBaseDeviceTemp);

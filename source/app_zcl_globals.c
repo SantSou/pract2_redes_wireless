@@ -47,7 +47,7 @@ typedef struct _zps_tsAplAfSimpleDescCont
 
 
 PUBLIC uint8 u8MaxZpsConfigEp = 2 ;
-PUBLIC uint8 au8EpMapPresent[2] = { 1 , 2 };
+PUBLIC uint8 au8EpMapPresent[2] = { 1 , ROUTER_TEMP_MEAS_ENDPOINT };
 
 
 
@@ -112,12 +112,12 @@ PUBLIC zps_tsAplAfSimpleDescCont s_asSimpleDescConts[3] = {
     },
 	{
 		{
-			0x0104,
+			0x0402,
 			0,
 			1,
-			1,
+			2,
+			6,
 			5,
-			4,
 			(uint16*)s_au16Endpoint2InputClusterList,
 			(uint16*)s_au16Endpoint2OutputClusterList,
 			s_au8Endpoint2InputClusterDiscFlags,
